@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import Calendar from "./pages/Calendar";
-import TimeTable from "./pages/TimeTable";
+import CalendarTest from "./pages/CalendarTest";
+import TimeTableTest from "./pages/TimeTableTest";
 
 function App() {
   return (
     <Routes>
-      <Route Path="/" element={<Calendar />} />
-      <Route Path="/timetable" element={<TimeTable />} />
+      <Route path="/" element={<CalendarTest />} />
+      <Route path="/timetable" element={<TimeTableTest />} />
     </Routes>
   );
 }
