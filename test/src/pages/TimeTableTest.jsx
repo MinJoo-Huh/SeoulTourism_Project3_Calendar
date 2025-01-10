@@ -1,6 +1,6 @@
 import React from "react";
 
-const TimeTableTest = ({ date, data }) => {
+const TimeTableTest = () => {
   if (!data || data.length === 0) {
     return <p>No schedule for {date}.</p>;
   }
