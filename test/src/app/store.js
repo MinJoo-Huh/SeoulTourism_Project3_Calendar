@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import languageReducer from "./languageSlice";
+import languageReducer from "../features/languageSlice";
 
 export const store = configureStore({
   reducer: {
     language: languageReducer,
   },
 });
-
-export default store;
