@@ -39,14 +39,6 @@ const Details = () => {
   return (
     <div>
       <GoogleMaps place={place} restaurants={restaurants} />
-      <select value={language} onChange={handleLanguageChange}>
-        {langOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      <p>{language}</p>
     </div>
   );
 };
