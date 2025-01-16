@@ -9,6 +9,7 @@ import KakaoMap from "./pages/KakaoMap";
 import Details from "./pages/Details";
 import GoogleMap from "./pages/GoogleMaps";
 import GoogleMaps2 from "./pages/GoogleMaps2";
+import MyTravel from "./pages/MyTravel";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/details" element={<Details />} />
         <Route path="/googlemap" element={<GoogleMap />} />
         <Route path="/googlegood" element={<GoogleMaps2 />} />
+        <Route path="/mytravel" element={<MyTravel />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Route>
     </Routes>
