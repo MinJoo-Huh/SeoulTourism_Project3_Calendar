@@ -16,6 +16,27 @@ const CalendarContainer = styled.div`
   .react-calendar__tile {
     width: 80px !important;
     height: 80px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .react-calendar__tile div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .react-calendar__tile div.marked {
+    background-color: #4caf50;
+    color: white;
   }
 
   .react-calendar__tile--hasActive {
@@ -27,6 +48,10 @@ const CalendarContainer = styled.div`
   .react-calendar__tile--hasActive:hover {
     background: #45a049;
   }
+
+  .react-calendar__month-view {
+    height: auto;
+  }
 `;
 
 const Calendar = ({ selectedDate, onDateChange, schedules = [] }) => {
@@ -34,8 +59,10 @@ const Calendar = ({ selectedDate, onDateChange, schedules = [] }) => {
     const hasSchedule = schedules.includes(date.toISOString().split("T")[0]);
 
     return hasSchedule ? (
-      <div style={{ color: "red", fontWeight: "bold" }}>●</div>
-    ) : null;
+      <div style={{ color: "red", fontWeight: "bold" }}>⭐</div>
+    ) : (
+      <div></div>
+    );
   };
 
   const handleDateChange = (date) => {
